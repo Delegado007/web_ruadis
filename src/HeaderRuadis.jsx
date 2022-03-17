@@ -4,7 +4,7 @@ import { Menu } from "@headlessui/react";
 
 function HeaderRuadis() {
   return (
-    <div className="navbar bg-base-100 mb-40 shadow-xl rounded-box">
+    <div className="navbar bg-base-100 mb-10 shadow-xl rounded-box">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost btn-circle">
