@@ -2,6 +2,8 @@ import React from "react";
 import { ItemMain } from "./ItemMain";
 import "./App.css";
 import { HeaderRuadis } from "./HeaderRuadis.jsx";
+import iconWhatsapp from "./image/whatsapp.svg";
+
 const datosLibros = {
   libros: [
     {
@@ -45,48 +47,48 @@ const datosLibros = {
       carillas: 564,
     },
     {
-      titulo: "CaraDeBola",
+      titulo: "Historia 2",
       ano: 2025,
       carillas: 980,
     },
     {
-      titulo: "CaraDeBola",
+      titulo: "Lengua 4",
       ano: 2025,
       carillas: 980,
     },
     {
-      titulo: "CaraDeBola",
+      titulo: "Ciencias",
       ano: 2025,
       carillas: 980,
     },
     {
-      titulo: "CaraDeBola",
+      titulo: "Ed. artistica y contemporanea de la hera del hielo",
       ano: 2025,
       carillas: 980,
     },
     {
-      titulo: "CaraDeBola",
+      titulo: "locuras del patito Juna",
       ano: 2025,
       carillas: 980,
     },
     {
-      titulo: "CaraDeBola",
+      titulo: "Madagascar y los 7 pitufos",
       ano: 2025,
       carillas: 980,
     },
     {
-      titulo: "CaraDeBola",
+      titulo: "Me cago en los nombres Ramdom",
       ano: 2025,
       carillas: 980,
     },
     {
-      titulo: "CaraDeBola",
+      titulo: "Prueba de imagiancion escrita",
       ano: 2025,
       carillas: 980,
     },
   ],
 };
-console.log(datosLibros.libros[1].carillas);
+
 function App() {
   return (
     <React.Fragment>
