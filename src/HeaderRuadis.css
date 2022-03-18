@@ -16,17 +16,19 @@ body {
     display: none;
   }
   #navegacion .items {
-    width: 0px;
+    display: none;
   }
   #navegacion .perfil {
     width: 50px;
+    margin-right: 10%;
   }
   #navegacion .logo {
+    margin-left: 10%;
     width: 20%;
     justify-content: flex-start;
   }
   #navegacion .itemsMenu {
-    width: calc(80% - 50px);
+    width: calc(60% - 50px);
     justify-content: flex-end;
     padding-right: 20px;
   }
