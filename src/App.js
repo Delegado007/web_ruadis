@@ -103,6 +103,9 @@ function App() {
           />
         ))}
       </main>
+      <div id="iconoWhatsapp">
+        <img src={iconWhatsapp} alt="whatsapp"></img>
+      </div>
     </React.Fragment>
   );
 }
