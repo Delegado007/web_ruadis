@@ -4,8 +4,8 @@ import "./HeaderRuadis.css";
 
 function HeaderRuadis() {
   return (
-    <div className="navbar bg-base-100 mb-10 shadow-xl">
-      <div className="navbar-start">
+    <div className="navbar bg-base-100 mb-10 shadow-xl" id="navegacion">
+      <div className="navbar-start items">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost btn-circle">
             <svg
@@ -45,10 +45,29 @@ function HeaderRuadis() {
           </ul>
         </div>
       </div>
-      <div className="navbar-center">
+      <div className="navbar-center logo">
         <a className="btn btn-ghost normal-case text-xl">Ruadis</a>
       </div>
-      <div className="navbar-end">
+      <div className="itemsMenu">
+        <ul className="menu menu-horizontal">
+          <li>
+            <a>inicio</a>
+          </li>
+          <li>
+            <a>Libros</a>
+          </li>
+          <li>
+            <a>Escuelas</a>
+          </li>
+          <li>
+            <a>Terciarios</a>
+          </li>
+          <li>
+            <a>Varios</a>
+          </li>
+        </ul>
+      </div>
+      <div className="navbar-end perfil">
         <div className="dropdown dropdown-end">
           <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
