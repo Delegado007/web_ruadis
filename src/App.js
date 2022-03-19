@@ -8,7 +8,7 @@ import { ImputBusqueda } from "./ImputBusqueda";
 const datosLibros = {
   libros: [
     {
-      titulo: "Derecho",
+      titulo: "Derecho 2",
       ano: 2015,
       carillas: 312,
     },
