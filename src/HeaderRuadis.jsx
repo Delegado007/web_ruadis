@@ -4,7 +4,7 @@ import "./HeaderRuadis.css";
 
 function HeaderRuadis() {
   return (
-    <div className="navbar bg-base-100 mb-10 shadow-xl" id="navegacion">
+    <div className="navbar bg-base-100 mb-0 shadow-xl" id="navegacion">
       <div className="navbar-start items">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost btn-circle">

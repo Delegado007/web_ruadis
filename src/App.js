@@ -3,6 +3,7 @@ import { ItemMain } from "./ItemMain";
 import "./App.css";
 import { HeaderRuadis } from "./HeaderRuadis.jsx";
 import iconWhatsapp from "./image/whatsapp.svg";
+import { ImputBusqueda } from "./ImputBusqueda";
 
 const datosLibros = {
   libros: [
@@ -93,6 +94,7 @@ function App() {
   return (
     <React.Fragment>
       <HeaderRuadis />
+      <ImputBusqueda />
       <main className="flex flex-wrap justify-center">
         {datosLibros.libros.map((libro) => (
           <ItemMain
