@@ -94,19 +94,23 @@ function App() {
   return (
     <React.Fragment>
       <HeaderRuadis />
-      <ImputBusqueda />
-      <main className="flex flex-wrap justify-center">
-        {datosLibros.libros.map((libro) => (
-          <ItemMain
-            key={libro.titulo}
-            titulo={libro.titulo}
-            ano={libro.ano}
-            carillas={libro.carillas}
-          />
-        ))}
+
+      <main className="sm:w-11/12 md:w-10/12 lg:w-9/12 mx-auto my-10 py-5 ">
+        <div className="flex flex-wrap justify-center">
+          {datosLibros.libros.map((libro) => (
+            <ItemMain
+              key={libro.titulo}
+              titulo={libro.titulo}
+              ano={libro.ano}
+              carillas={libro.carillas}
+            />
+          ))}
+        </div>
       </main>
       <div id="iconoWhatsapp">
-        <img src={iconWhatsapp} alt="whatsapp"></img>
+        <a href="https://api.whatsapp.com/send?phone=2604566841">
+          <img src={iconWhatsapp} alt="whatsapp"></img>
+        </a>
       </div>
     </React.Fragment>
   );

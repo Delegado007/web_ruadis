@@ -1,16 +1,34 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#navegacion {
+  position: fixed;
+  top: 0px;
+  z-index: 15;
 }
-
+.menuDesplegable {
+  border-top: solid 1px rgb(166, 173, 186);
+  position: fixed;
+  box-sizing: border-box;
+  font-size: 2rem;
+  height: 50px;
+  top: 67px;
+  left: 0px;
+  height: -webkit-fill-available;
+  z-index: 15;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+#MenuDesplegable {
+  justify-content: space-around;
+  align-items: center;
+}
+#MenuDesplegable li {
+  width: 100%;
+  align-items: center;
+}
+#MenuDesplegable li a:hover {
+  border-radius: 20px;
+}
 @media screen and (min-width: 930px) {
   #navegacion label svg {
     display: none;
@@ -20,21 +38,32 @@ body {
   }
   #navegacion .perfil {
     width: 50px;
-    margin-right: 10%;
+    margin-right: 10px;
   }
   #navegacion .logo {
-    margin-left: 10%;
-    width: 20%;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100px;
     justify-content: flex-start;
   }
   #navegacion .itemsMenu {
-    width: calc(60% - 50px);
+    width: 430px;
     justify-content: flex-end;
-    padding-right: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  #navegacion .busqueda {
+    width: calc(100% - 630px);
   }
 }
-@media screen and (max-width: 929px) {
+@media screen and (max-width: 959px) {
   #navegacion .itemsMenu {
     display: none;
+  }
+  #navegacion .busqueda {
+    display: none;
+  }
+  #navegacion .logo a {
+    font-size: 2rem;
   }
 }

@@ -3,7 +3,7 @@ import logo from "./image/logoPdf2.png";
 
 function ItemMain({ titulo, ano, carillas }) {
   return (
-    <div className="card card-side bg-base-100 shadow-xl m-4 w-96 text-slate-200">
+    <div className="card card-side bg-base-100 shadow-xl m-4 w-96 text-slate-400">
       <figure className=" bg-slate-700">
         <img className="w-36 px-2" src={logo} alt="Movie"></img>
       </figure>
