@@ -1,16 +1,36 @@
 import React from "react";
 import "./HeaderRuadis.css";
 import { useState } from "react";
-// import { Menu } from "@headlessui/react";
-import cross_v1 from "./image/whatsapp.svg";
-import cross_v2 from "./image/whatsapp.svg";
-import hambuerger from "./image/whatsapp.svg";
+
 import { current } from "daisyui/src/colors";
 
 function HeaderRuadis() {
   const [desplegarMenu, setDesplegarMenu] = useState(false);
   const actualizar = (e) => {
     setDesplegarMenu(e.target.checked);
+  };
+  const actualizarBusqueda = function (event) {
+    if (event.target.value.length > 0) {
+      const boton = document.querySelector("#SearchBarClearIconWrapper");
+      boton.className = "sc-cEvuZC eblfxh";
+    } else {
+      const boton = document.querySelector("#SearchBarClearIconWrapper");
+      boton.className = "sc-cEvuZC noDispaly";
+    }
+  };
+  const efectoFocus = function () {
+    const div = document.querySelector("#SearchWrapper");
+    div.className = "sc-iybRtq cYUjOG";
+  };
+  const efectoBlur = function () {
+    const div = document.querySelector("#SearchWrapper");
+    div.className = "sc-iybRtq ctSVqk";
+  };
+  const borrarImput = function () {
+    const imput = document.querySelector("#searchInput");
+    imput.value = "";
+    const boton = document.querySelector("#SearchBarClearIconWrapper");
+    boton.className = "sc-cEvuZC noDispaly";
   };
   // console.log(desplegarMenu);
   return (
@@ -68,28 +88,84 @@ function HeaderRuadis() {
       <div className="navbar-center logo">
         <a className="btn btn-ghost normal-case text-xl">Ruadis</a>
       </div>
-      <div className="busqueda input-group">
-        <button className="btn btn-square">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </button>
-        <input
-          type="text"
-          placeholder="Busca aquí"
-          className="input input-bordered w-full bg-gray-700"
-        ></input>
+      <div className="sc-iFMziU kYCuyq">
+        <div
+          id="SearchWrapper"
+          data-component-locator="SearchBar"
+          className="sc-iybRtq ctSVqk"
+        >
+          <div id="idWrapper" className="sc-iQtOjA caLrfK">
+            <div alt="Search Icon" className="sc-ifAKCX gQUJAq">
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 17 17"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="6.5"
+                  cy="6.5"
+                  r="6"
+                  stroke="#68676F"
+                  strokeWidth="1"
+                ></circle>
+                <path
+                  d="M15 15L11 11"
+                  stroke="#68676F"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <input
+            id="searchInput"
+            type="text"
+            autoComplete="off"
+            name="searchInput"
+            aria-label="search text"
+            placeholder="Busca por titulo"
+            maxLength="300"
+            data-test-locator="SearchBar-Input"
+            className="sc-fHxwqH AfTtS"
+            onFocus={efectoFocus}
+            onBlur={efectoBlur}
+            onChange={actualizarBusqueda}
+          ></input>
+          <div id="SearchBarClearIconWrapper" className="sc-cEvuZC eblfxh">
+            <button
+              aria-label="clear search button"
+              data-test-locator="SearchBarClearIcon"
+              type="button"
+              className="sc-kkGfuU eSFrNo"
+              onClick={borrarImput}
+            >
+              <div alt="Cross in circle" className="sc-ifAKCX kneZas">
+                <svg
+                  width="22px"
+                  height="22px"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.10803 13.8964L13.8943 6.1084"
+                    stroke="#68676F"
+                    strokeLinecap="round"
+                  ></path>
+                  <path
+                    d="M6.10803 6.10834L13.8943 13.8964"
+                    stroke="#68676F"
+                    strokeLinecap="round"
+                  ></path>
+                  <circle cx="10" cy="10" r="9.5" stroke="#68676F"></circle>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
       </div>
       <div className="itemsMenu">
         <ul className="menu menu-horizontal">

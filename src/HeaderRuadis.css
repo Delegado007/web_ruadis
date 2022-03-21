@@ -21,14 +21,97 @@
   flex-direction: column;
   padding-bottom: 30px;
 }
-#divImput {
-}
-#MenuDesplegable {
+
+.kYCuyq {
+  display: flex;
+  -webkit-box-align: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.caLrfK {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding-left: 12px;
+  margin-right: 12px;
+}
+.cYUjOG {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 42px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(255, 255, 255, 0.3) 4px 4px 15px;
+  border: 1px solid transparent;
+  box-sizing: content-box;
+  border-radius: 10px;
+  transition: all 0.4s ease-out 0s;
+}
+/* clases a asignar cuando mause clic adentro */
+.ctSVqk {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 42px;
+  background-color: rgb(233, 231, 227);
+  box-shadow: none;
+  border: 1px solid rgb(233, 231, 277);
+  box-sizing: content-box;
+  border-radius: 10px;
+  transition: all 0.4s ease-in 0s;
+}
+
+.gQUJAq {
+  user-select: none;
+  display: flex;
+  padding: 0px;
+}
+.AfTtS {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: normal;
+  font-weight: 400;
+  width: 100%;
+  height: 42px;
+  border: none;
+  background-color: inherit;
+  outline: none;
+  caret-color: rgb(93, 93, 93);
+  color: rgb(64, 64, 69);
+  text-overflow: ellipsis;
+  border-radius: 10px;
+  appearance: none;
+}
+.eblfxh {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 50px;
+  height: 100%;
+  margin-right: 10px;
+}
+.eSFrNo {
+  position: relative;
+  left: 0px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0px;
+}
+.kneZas {
+  user-select: none;
+  display: flex;
+  padding: 0px;
+}
+.noDispaly {
+  display: none;
 }
 #MenuDesplegable li {
   width: 100%;
-  align-items: center;
+  align-items: flex-start;
 }
 #MenuDesplegable li a:hover {
   border-radius: 20px;
@@ -45,6 +128,9 @@
   }
   #navegacion .logo a {
     font-size: 1.5rem;
+  }
+  #navegacion .sc-iFMziU {
+    display: none;
   }
 }
 @media screen and (min-width: 959px) {
