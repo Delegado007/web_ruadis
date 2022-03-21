@@ -16,7 +16,7 @@ function HeaderRuadis() {
   return (
     <div className="navbar bg-base-100 mb-0 shadow-xl" id="navegacion">
       <div className="navbar-start items">
-        <div>
+        <div className="hamburguesa">
           <label className="btn btn-circle swap swap-rotate">
             <input type="checkbox" onChange={actualizar} />
             <svg
@@ -68,11 +68,27 @@ function HeaderRuadis() {
       <div className="navbar-center logo">
         <a className="btn btn-ghost normal-case text-xl">Ruadis</a>
       </div>
-      <div className="busqueda">
+      <div className="busqueda input-group">
+        <button className="btn btn-square">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </button>
         <input
           type="text"
           placeholder="Busca aquí"
-          className="input border-none w-full bg-gray-700"
+          className="input input-bordered w-full bg-gray-700"
         ></input>
       </div>
       <div className="itemsMenu">
