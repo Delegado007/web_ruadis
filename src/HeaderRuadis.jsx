@@ -66,7 +66,7 @@ function HeaderRuadis() {
                 id="MenuDesplegable"
               >
                 <li>
-                  <a>inicio</a>
+                  <a>Inicio</a>
                 </li>
                 <li>
                   <a>Libros</a>
