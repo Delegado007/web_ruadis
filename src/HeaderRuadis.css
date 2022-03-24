@@ -24,9 +24,7 @@
 .navbar ul li a:hover {
   background-color: transparent;
 }
-.navbar ul li a:hover svg {
-  fill: white;
-}
+
 @media screen and (max-width: 958px) {
   .hamburguesa {
     display: inline-flex;
@@ -48,9 +46,6 @@
   }
 }
 @media screen and (min-width: 959px) {
-  .navbar label svg {
-    display: none;
-  }
   .navbar .items {
     display: none;
   }
