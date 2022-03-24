@@ -3,160 +3,74 @@
   top: 0px;
   z-index: 15;
 }
-/* .busqueda {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xMjE2IDgzMnEwLTE4NS0xMzEuNS0zMTYuNVQ3NjggMzg0IDQ1MS41IDUxNS41IDMyMCA4MzJ0MTMxLjUgMzE2LjVUNzY4IDEyODB0MzE2LjUtMTMxLjVUMTIxNiA4MzJ6bTUxMiA4MzJxMCA1Mi0zOCA5MHQtOTAgMzhxLTU0IDAtOTAtMzhsLTM0My0zNDJxLTE3OSAxMjQtMzk5IDEyNC0xNDMgMC0yNzMuNS01NS41dC0yMjUtMTUwLTE1MC0yMjVUNjQgODMydDU1LjUtMjczLjUgMTUwLTIyNSAyMjUtMTUwVDc2OCAxMjh0MjczLjUgNTUuNSAyMjUgMTUwIDE1MCAyMjVUMTQ3MiA4MzJxMCAyMjAtMTI0IDM5OWwzNDMgMzQzcTM3IDM3IDM3IDkweiIgZmlsbD0iI2FiYWJhYiIgY2xhc3M9ImZpbGwtMDAwMDAwIj48L3BhdGg+PC9zdmc+");
-} */
-.menuDesplegable {
-  border-top: solid 1px rgb(166, 173, 186);
-  position: fixed;
-  box-sizing: border-box;
-  font-size: 1.5rem;
-  height: 50px;
-  top: 67px;
-  left: 0px;
-  height: -webkit-fill-available;
-  z-index: 15;
-  width: 100vw;
+
+.navbar .menuDesplegable {
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
-}
-
-.kYCuyq {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-.caLrfK {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  padding-left: 12px;
-  margin-right: 12px;
-}
-.cYUjOG {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 42px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgba(255, 255, 255, 0.3) 4px 4px 15px;
-  border: 1px solid transparent;
-  box-sizing: content-box;
-  border-radius: 10px;
-  transition: all 0.4s ease-out 0s;
-}
-/* clases a asignar cuando mause clic adentro */
-.ctSVqk {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 42px;
-  background-color: rgb(233, 231, 227);
-  box-shadow: none;
-  border: 1px solid rgb(233, 231, 277);
-  box-sizing: content-box;
-  border-radius: 10px;
-  transition: all 0.4s ease-in 0s;
-}
-
-.gQUJAq {
-  user-select: none;
-  display: flex;
-  padding: 0px;
-}
-.AfTtS {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: normal;
-  font-weight: 400;
-  width: 100%;
-  height: 42px;
-  border: none;
-  background-color: inherit;
-  outline: none;
-  caret-color: rgb(93, 93, 93);
-  color: rgb(64, 64, 69);
-  text-overflow: ellipsis;
-  border-radius: 10px;
-  appearance: none;
-}
-.eblfxh {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  width: 50px;
-  height: 100%;
-  margin-right: 10px;
-}
-.eSFrNo {
-  position: relative;
+  height: -webkit-fill-available;
+  position: fixed;
+  top: 0px;
   left: 0px;
-  cursor: pointer;
-  border: none;
-  background: none;
-  padding: 0px;
+  z-index: 15;
 }
-.kneZas {
-  user-select: none;
-  display: flex;
-  padding: 0px;
-}
-.noDispaly {
-  display: none;
-}
-#MenuDesplegable li {
+
+.navbar li {
   width: 100%;
   align-items: flex-start;
 }
-#MenuDesplegable li a:hover {
-  border-radius: 20px;
+.navbar ul {
+  box-shadow: none;
+}
+.navbar ul li a:hover {
+  background-color: transparent;
+}
+.navbar ul li a:hover svg {
+  fill: white;
 }
 @media screen and (max-width: 958px) {
   .hamburguesa {
     display: inline-flex;
   }
-  #navegacion .itemsMenu {
+  .navbar .itemsMenu {
     display: none;
   }
-  #navegacion .busqueda {
+  header .container_search_desktop {
     display: none;
   }
-  #navegacion .logo a {
+  .navbar .logo a {
     font-size: 1.5rem;
   }
-  #navegacion .sc-iFMziU {
+  .navbar .container_search_desktop {
     display: none;
+  }
+  .navbar .container_search_movil {
+    width: 100%;
   }
 }
 @media screen and (min-width: 959px) {
-  #navegacion label svg {
+  .navbar label svg {
     display: none;
   }
-  #navegacion .items {
+  .navbar .items {
     display: none;
   }
-  #navegacion .perfil {
+  .navbar .perfil {
     width: 50px;
     margin-right: 10px;
   }
-  #navegacion .logo {
+  .navbar .logo {
     margin-left: 10px;
     margin-right: 10px;
     width: 100px;
     justify-content: flex-start;
   }
-  #navegacion .itemsMenu {
+  .navbar .itemsMenu {
     width: 430px;
     justify-content: flex-end;
     margin-right: 20px;
     margin-left: 20px;
   }
-  #navegacion .busqueda {
+  .navbar .container_search_desktop {
     width: calc(100% - 630px);
   }
 }

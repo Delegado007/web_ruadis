@@ -3,7 +3,6 @@ import { ItemMain } from "./ItemMain";
 import "./App.css";
 import { HeaderRuadis } from "./HeaderRuadis.jsx";
 import iconWhatsapp from "./image/whatsapp.svg";
-import { ImputBusqueda } from "./ImputBusqueda";
 
 const datosLibros = {
   libros: [
