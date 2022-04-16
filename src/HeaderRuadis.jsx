@@ -10,7 +10,8 @@ function HeaderRuadis() {
 
   useEffect(() => {
     const nocturneMode = JSON.parse(localStorage.getItem("nocturneMod"));
-    if (nocturneMode === undefined) {
+    console.log(nocturneMode);
+    if (nocturneMode === null) {
       localStorage.setItem("nocturneMod", "false");
     } else {
       setModoNocturno(nocturneMode);
