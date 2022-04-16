@@ -6,34 +6,33 @@ import { ImputBusquedaMovil } from "./ImputBusquedaMovil";
 
 function HeaderRuadis() {
   const [desplegarMenu, setDesplegarMenu] = useState(false);
-  const [modoNocturno, setModoNocturno] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const nocturneMode = JSON.parse(localStorage.getItem("nocturneMod"));
-    console.log(nocturneMode);
-    if (nocturneMode === null) {
-      localStorage.setItem("nocturneMod", "false");
+    const localDarkMode = JSON.parse(localStorage.getItem("localDarkMode"));
+    if (localDarkMode === null) {
+      localStorage.setItem("localDarkMode", "false");
     } else {
-      setModoNocturno(nocturneMode);
+      setDarkMode(localDarkMode);
     }
-    if (modoNocturno) {
+    if (darkMode) {
       document.querySelector("html").className = "dark";
       document.querySelector("#docMode").checked = true;
     }
-    if (!modoNocturno) {
+    if (!darkMode) {
       document.querySelector("#docMode").checked = false;
       document.querySelector("html").className = "";
     }
   });
-  const cambiarModoNocturno = (evento) => {
+  const cambiardarkMode = (evento) => {
     if (!evento.target.checked) {
-      localStorage.setItem("nocturneMod", "false");
+      localStorage.setItem("localDarkMode", "false");
       document.querySelector("html").className = "dark";
-      setModoNocturno(false);
+      setDarkMode(false);
     } else {
-      localStorage.setItem("nocturneMod", "true");
+      localStorage.setItem("localDarkMode", "true");
       document.querySelector("html").className = "";
-      setModoNocturno(true);
+      setDarkMode(true);
     }
   };
   const actualizar = (e) => {
@@ -199,7 +198,7 @@ function HeaderRuadis() {
               <label className="swap swap-rotate">
                 <input
                   type="checkbox"
-                  onChange={cambiarModoNocturno}
+                  onChange={cambiardarkMode}
                   id="docMode"
                 />
 
