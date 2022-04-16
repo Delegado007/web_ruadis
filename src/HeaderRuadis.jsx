@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./HeaderRuadis.css";
 import { useState } from "react";
 import { ImputBusquedaDesktop } from "./ImputBusquedaDesktop";
@@ -6,14 +6,33 @@ import { ImputBusquedaMovil } from "./ImputBusquedaMovil";
 
 function HeaderRuadis() {
   const [desplegarMenu, setDesplegarMenu] = useState(false);
+  const [modoNocturno, setModoNocturno] = useState(false);
+
+  useEffect(() => {
+    const nocturneMode = JSON.parse(localStorage.getItem("nocturneMod"));
+    if (nocturneMode === undefined) {
+      localStorage.setItem("nocturneMod", "false");
+    } else {
+      setModoNocturno(nocturneMode);
+    }
+    if (modoNocturno) {
+      document.querySelector("html").className = "dark";
+      document.querySelector("#docMode").checked = true;
+    }
+    if (!modoNocturno) {
+      document.querySelector("#docMode").checked = false;
+      document.querySelector("html").className = "";
+    }
+  });
   const cambiarModoNocturno = (evento) => {
     if (!evento.target.checked) {
-      console.log("asa");
-      const html = document.querySelector("html");
-      html.className = "dark";
+      localStorage.setItem("nocturneMod", "false");
+      document.querySelector("html").className = "dark";
+      setModoNocturno(false);
     } else {
-      const html = document.querySelector("html");
-      html.className = "";
+      localStorage.setItem("nocturneMod", "true");
+      document.querySelector("html").className = "";
+      setModoNocturno(true);
     }
   };
   const actualizar = (e) => {
@@ -177,7 +196,11 @@ function HeaderRuadis() {
             </li>
             <li>
               <label className="swap swap-rotate">
-                <input type="checkbox" onChange={cambiarModoNocturno} />
+                <input
+                  type="checkbox"
+                  onChange={cambiarModoNocturno}
+                  id="docMode"
+                />
 
                 <svg
                   className="swap-on fill-current w-10 h-10"
