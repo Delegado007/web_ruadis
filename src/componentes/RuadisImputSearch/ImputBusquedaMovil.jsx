@@ -1,5 +1,5 @@
 import React from "react";
-import "./ImputBusquedaDesktop.css";
+import "./ImputBusquedaMobil.css";
 import "../RuadisHeader/index.css";
 
 function ImputBusquedaMovil() {
@@ -14,11 +14,11 @@ function ImputBusquedaMovil() {
   };
   const efectoFocusMovil = function () {
     const div = document.querySelector("#search_movil");
-    div.className = "search_desktop_transition_ease-out";
+    div.className = "search_mobil_transition_ease-out";
   };
   const efectoBlurMovil = function () {
     const div = document.querySelector("#search_movil");
-    div.className = "search_desktop_transition_ease-in";
+    div.className = "search_mobil_transition_ease-in";
   };
   const borrarImputMovil = function () {
     const imput = document.querySelector("#searchInputMovil");
@@ -31,9 +31,9 @@ function ImputBusquedaMovil() {
       <div
         id="search_movil"
         data-component-locator="SearchBar"
-        className="search_desktop_transition_ease-in"
+        className="search_mobil_transition_ease-in"
       >
-        <div className="lupa_search_desktop">
+        <div className="lupa_search_mobil">
           <svg
             width="16"
             height="16"
@@ -66,7 +66,7 @@ function ImputBusquedaMovil() {
           placeholder="Busca por titulo"
           maxLength="300"
           data-test-locator="SearchBar-Input"
-          className="imput_search_desktop"
+          className="imput_search_mobil"
           onFocus={efectoFocusMovil}
           onBlur={efectoBlurMovil}
           onChange={actualizarBusquedaMovil}
