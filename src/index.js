@@ -1,5 +1,5 @@
 import { render } from "react-dom";
-import App from "./App";
+import App from "./componentes/App/index";
 
 const rootElement = document.getElementById("root");
 render(
