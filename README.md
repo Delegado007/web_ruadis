@@ -1,7 +1,8 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+Bienvenidos a la Web de Ruadis
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este sitio se encarga de presupuestar el valor de libros y apuntes que se encuentran en un servidor local en el local fisico de Ruadis
+La idea inicial es poder encontrar el material diponible sin tener que asistir al local físico
+Tambien se podrá sacar presupuesto Online y pedir material via Whatsapp
 
 ## Available Scripts
 
